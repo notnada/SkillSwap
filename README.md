@@ -52,12 +52,12 @@ SkillSwap connects people who want to learn new skills by trading knowledge they
 
 skillswap/
 │
-├── index.html # Main landing page
-├── login.html # User login page
-├── marketplace.html # Skills browsing and swapping
-├── style.css # Comprehensive stylesheet
-├── script.js # JavaScript functionality
-├── README.md # Project documentation
-└── images/ # Image assets
-├── your-image.png
-└── student-image.png
+├── index.html          # Main landing page
+├── login.html          # User login page
+├── marketplace.html    # Skills browsing and swapping
+├── style.css           # Comprehensive stylesheet
+├── script.js           # JavaScript functionality
+├── README.md           # Project documentation
+└── images/             # Image assets
+    ├── your-image.png
+    └── student-image.png
