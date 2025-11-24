@@ -36,3 +36,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach(sec => observer.observe(sec));
 });
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Form submission handling
+document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.querySelector('.login-container form');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Basic validation
+            if (email && password) {
+                alert('Login successful! Redirecting...');
+                // In a real application, you would handle the login process here
+            } else {
+                alert('Please fill in all fields');
+            }
+        });
+    }
+    
+    // Newsletter subscription
+    const subscribeBtn = document.querySelector('.subscribe-btn');
+    if (subscribeBtn) {
+        subscribeBtn.addEventListener('click', function() {
+            const emailInput = document.querySelector('.email-input');
+            if (emailInput.value) {
+                alert('Thank you for subscribing to our newsletter!');
+                emailInput.value = '';
+            } else {
+                alert('Please enter your email address');
+            }
+        });
